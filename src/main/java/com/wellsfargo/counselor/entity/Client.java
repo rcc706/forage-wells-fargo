@@ -1,9 +1,11 @@
-package main.java.com.wellsfargo.counselor.entity;
+package com.wellsfargo.counselor.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Client {
@@ -27,6 +29,10 @@ public class Client {
     @Column(nullable = false)
     private String email;
 
+    @OneToOne
+    @JoinColumn(name = "portfolioId")
+    private Portfolio portfolio; 
+
     protected Client() {
 
     }
@@ -40,7 +46,7 @@ public class Client {
     }
 
     public Long getClientId() {
-        return advisorId;
+        return clientId;
     }
 
     public String getFirstName() {
@@ -80,6 +86,14 @@ public class Client {
     }
 
     public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPortfolio() {
+        return email;
+    }
+
+    public void setPortfolio(String email) {
         this.email = email;
     }
 }

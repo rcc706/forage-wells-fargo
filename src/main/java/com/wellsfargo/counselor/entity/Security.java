@@ -1,4 +1,4 @@
-package main.java.com.wellsfargo.counselor.entity;
+package com.wellsfargo.counselor.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -22,10 +22,10 @@ public class Security {
     private String purchaseDate;
 
     @Column(nullable = false)
-    private String purchasePrice;
+    private float purchasePrice;
 
     @Column(nullable = false)
-    private String quantity;
+    private int quantity;
 
     protected Security() {
 

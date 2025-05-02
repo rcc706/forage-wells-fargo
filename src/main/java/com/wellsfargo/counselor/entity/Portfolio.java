@@ -1,4 +1,4 @@
-package main.java.com.wellsfargo.counselor.entity;
+package com.wellsfargo.counselor.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
